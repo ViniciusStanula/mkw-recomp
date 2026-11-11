@@ -207,4 +207,15 @@ void vk_crumbs_report(void) {
         rt_log("vk:   %s: last started %s", what[k], a);
         rt_log("vk:   %s: last finished %s", what[k], b);
     }
+    // Every mark between the last finished and the last started replay mark, oldest first: one of them hung. Debug
+    // (issue #22): the two ends alone name 2 of the ~75 draws the hang can be in.
+    uint32_t lo = words[3], hi = words[2];
+    if (hi > lo && hi - lo <= 400) {
+        rt_log("vk:   the %u marks in that window:", hi - lo);
+        for (uint32_t id = lo + 1; id <= hi; id++) {
+            char a[256];
+            describe(id, a, sizeof a);
+            rt_log("vk:     %s", a);
+        }
+    }
 }

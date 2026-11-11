@@ -30,6 +30,56 @@
 #include "vk_reuse.h"
 #include "platform/platform.h"
 
+// MKW_SKIP_PROGRAMS=<hex>[,<hex>...] (debug, off when unset): a draw whose vertex or fragment program key starts with one
+// of these hex prefixes (8 hex digits or more, as the breadcrumbs print them) is not drawn. Why: issue #22's device
+// loss on NVIDIA is bounded by the breadcrumbs only to a window of ~75 draws; skipping halves of that window finds the
+// one program that faults.
+enum { SKIP_MAX = 128 };
+static char skip_hex[SKIP_MAX][65];
+static int skip_n, skip_state;   // 0 not read, 1 reading, 2 ready
+
+static void skip_read(void) {
+    int z = 0;
+    if (__atomic_compare_exchange_n(&skip_state, &z, 1, 0, __ATOMIC_ACQ_REL, __ATOMIC_ACQUIRE)) {
+        const char *e = cfg_get("MKW_SKIP_PROGRAMS");
+        while (e && *e && skip_n < SKIP_MAX) {
+            while (*e == ',' || *e == ' ' || *e == ';') e++;
+            size_t n = 0;
+            while (n < 64 && ((e[n] >= '0' && e[n] <= '9') || (e[n] >= 'a' && e[n] <= 'f') || (e[n] >= 'A' && e[n] <= 'F'))) n++;
+            if (n >= 8) {
+                for (size_t i = 0; i < n; i++) skip_hex[skip_n][i] = (char)(e[i] >= 'A' && e[i] <= 'F' ? e[i] + 32 : e[i]);
+                skip_hex[skip_n][n] = 0;
+                rt_log("vk_exec: MKW_SKIP_PROGRAMS: draws with a program starting %s are skipped", skip_hex[skip_n]);
+                skip_n++;
+            }
+            if (!n) break;
+            e += n;
+        }
+        __atomic_store_n(&skip_state, 2, __ATOMIC_RELEASE);
+    }
+    while (__atomic_load_n(&skip_state, __ATOMIC_ACQUIRE) != 2) {}
+}
+
+static int skip_key(const uint8_t *k) {
+    char h[65];
+    for (int i = 0; i < 32; i++) snprintf(h + 2 * i, 3, "%02x", k[i]);
+    for (int i = 0; i < skip_n; i++)
+        if (!strncmp(h, skip_hex[i], strlen(skip_hex[i]))) return 1;
+    return 0;
+}
+
+static int skip_listed(const GfxShader *vs, const GfxShader *fs) {
+    if (__atomic_load_n(&skip_state, __ATOMIC_ACQUIRE) != 2) skip_read();
+    if (!skip_n) return 0;
+    static uint64_t skipped;
+    if ((vs && skip_key(gfx_shader_key(vs))) || (fs && skip_key(gfx_shader_key(fs)))) {
+        if (!(__atomic_fetch_add(&skipped, 1, __ATOMIC_RELAXED) & ((1u << 20) - 1)))
+            rt_log("vk_exec: MKW_SKIP_PROGRAMS skipped a draw (more follow without a line until 1M)");
+        return 1;
+    }
+    return 0;
+}
+
 #define ONESHOT_WAIT_MS 30000u   // prepare_draw: how long a one-shot draw waits for its pipeline before it is skipped
 
 void warn_once(int key, const char *fmt, ...) {
@@ -566,6 +616,7 @@ int prepare_draw_ex(VkExec *ex, int prim, int32_t count, int restart, int mesh) 
     }
     if (pending) return vk_exec_frame.skip[VK_SKIP_PIPE_WAIT]++, 0;   // a background worker is building it: the draw is skipped until it is ready
     if (!p || !info) return vk_exec_frame.skip[VK_SKIP_PIPE_FAILED]++, warn_once(W_PIPELINE, "a graphics pipeline could not be created: draws with it are skipped"), 0;
+    if (skip_listed(vs, fs)) return 0;
     PD_MARK(PD_PIPE);
     bind_pipeline(ex, VK_PIPELINE_BIND_POINT_GRAPHICS, p);
     recent_note(vs, fs);
