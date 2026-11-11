@@ -37,6 +37,10 @@
 enum { SKIP_MAX = 128 };
 static char skip_hex[SKIP_MAX][65];
 static int skip_n, skip_state;   // 0 not read, 1 reading, 2 ready
+static uint8_t skip_bytes[SKIP_MAX][32];
+static uint8_t skip_nib[SKIP_MAX];   // hex digits in each prefix
+
+static int hexval(char c) { return c <= '9' ? c - '0' : c - 'a' + 10; }
 
 static void skip_read(void) {
     int z = 0;
@@ -49,6 +53,9 @@ static void skip_read(void) {
             if (n >= 8) {
                 for (size_t i = 0; i < n; i++) skip_hex[skip_n][i] = (char)(e[i] >= 'A' && e[i] <= 'F' ? e[i] + 32 : e[i]);
                 skip_hex[skip_n][n] = 0;
+                skip_nib[skip_n] = (uint8_t)n;
+                for (size_t i = 0; i < n; i++)
+                    skip_bytes[skip_n][i / 2] |= (uint8_t)(hexval(skip_hex[skip_n][i]) << (i & 1 ? 0 : 4));
                 rt_log("vk_exec: MKW_SKIP_PROGRAMS: draws with a program starting %s are skipped", skip_hex[skip_n]);
                 skip_n++;
             }
@@ -60,11 +67,14 @@ static void skip_read(void) {
     while (__atomic_load_n(&skip_state, __ATOMIC_ACQUIRE) != 2) {}
 }
 
+// Against the key's bytes: the prefixes are turned into bytes once (skip_bytes), not the key into text on every draw.
 static int skip_key(const uint8_t *k) {
-    char h[65];
-    for (int i = 0; i < 32; i++) snprintf(h + 2 * i, 3, "%02x", k[i]);
-    for (int i = 0; i < skip_n; i++)
-        if (!strncmp(h, skip_hex[i], strlen(skip_hex[i]))) return 1;
+    for (int i = 0; i < skip_n; i++) {
+        int full = skip_nib[i] / 2;
+        if (memcmp(k, skip_bytes[i], (size_t)full)) continue;
+        if ((skip_nib[i] & 1) && (k[full] >> 4) != (skip_bytes[i][full] >> 4)) continue;
+        return 1;
+    }
     return 0;
 }
 
