@@ -1,0 +1,1051 @@
+[host] cfg: mkw.ini line 4: unknown key 'SKIP_PROGRAMS'
+[host] cfg: read C:\Games\mkw-recomp\mkw.ini: 5 keys
+[host] log: C:\Games\mkw-recomp/logs/mkw.log
+[host] gfx: SDL 3.4.18, video driver windows
+[host] vk: gpu 0: NVIDIA GeForce RTX 3060 (type 2, api 1.4.351)
+[host] vk: using gpu 0: NVIDIA GeForce RTX 3060
+[host] mem: class discrete (device-local heap separate from host memory; device type 2 discrete, NVIDIA GeForce RTX 3060); heap 0 12115 MiB flags 0x1 DEVICE_LOCAL; heap 1 8154 MiB flags 0; heap 2 214 MiB flags 0x1 DEVICE_LOCAL
+[host] mem: types; 0 heap 1 flags 0; 1 heap 0 flags 0x1 DEVICE_LOCAL; 2 heap 0 flags 0x1 DEVICE_LOCAL; 3 heap 1 flags 0x6 HOST_VISIBLE HOST_COHERENT; 4 heap 1 flags 0xe HOST_VISIBLE HOST_COHERENT HOST_CACHED; 5 heap 2 flags 0x7 DEVICE_LOCAL HOST_VISIBLE HOST_COHERENT
+[host] mem: mode mirror (auto, discrete gpu): pools used as buffers get a device-local mirror
+[host] vk: mesh shaders: task and mesh
+[host] vk: feedback loops: feedback layout + by-region barrier (attachmentFeedbackLoopLayout 1, dynamicRenderingLocalRead 1)
+[host] loaded main     at 0x7000000000 size 0x3410000: 271683 relocations, 1289 imports
+[host] loaded subsdk0  at 0x7003600000 size 0x8d9000: 3203 relocations, 216 imports
+[host] loaded sdk      at 0x7004000000 size 0xf00000: 34917 relocations, 8 imports
+[host] patches: zstd on, output off, shadow off, seed off (page 0x7003410000)
+[host] patches: game output 1920x1080 instead of 2560x1440 (MKW_RESOLUTION original, MKW_ASPECT 16:9, window lines 1080)
+[host] vk caps: NVIDIA GeForce RTX 3060, vendor 0x10de device 0x2503, driver NVIDIA "617.42" (id 4, version 617.42.0.0, raw 0x9a4a8000), api 1.4.351
+[host] vk caps: subgroup size 32, stages 0x3fff, ops 0x7ff; size control 1 (32-32, required stages 0x3fff)
+[host] vk caps: shaderFloat64 1 (enabled 1), storage buffer offset alignment 16 (device 16), uniform 64, maxPushDescriptors 32, provoking vertex ext 1 last 1
+[host] vk caps: ext index_type_uint8 khr 1 ext 1, attachment_feedback_loop_layout 1 dynamic_state 1, graphics_pipeline_library 1; depth attachment D16 y D24S8 y X8D24 y D32 y D32S8 y
+[host] vk caps: gpl yes fast-link yes (graphicsPipelineLibrary 1)
+[host] vk caps: fallbacks: float64 native, storage buffers rounded down to 16, subgroup pin 32 on stages 0x3fff, device subgroup 32
+[host] vk: heap 0 limited to 11047 MiB: budget 11347 MiB less MKW_VRAM_MARGIN (MKW_GPU_MEM_LIMIT=0 lifts it)
+[host] vk: GPU breadcrumbs on: upload batches, render passes, dispatches and draws (MKW_GPU_CRUMBS_DRAW) (MKW_GPU_CRUMBS=0 turns them off)
+[host] vk: headroom: the next VMA block of each memory type in use is allocated on a background thread (MKW_VRAM_HEADROOM=0 turns it off)
+[host] vk_pipeline: graphics pipeline library on: a draw whose pipeline is building gets a fast-linked one, the optimised build replaces it when done
+[host] vk_pipeline: stage-independent layouts: vertex set 0, fragment set 1, vertex set pushed; vertex outputs: union of paired fragment inputs
+[host] vk_pipeline: subgroup size 32-32, requiredSubgroupSizeStages 0x3fff, pinning 32 on 0x3fff
+[host] vk: headroom: a 256 MiB block of memory type 1 allocated ahead (1 so far; 2 allocations of 32 MiB or more on other threads)
+[host] vk: headroom: a 256 MiB block of memory type 4 allocated ahead (2 so far; 3 allocations of 32 MiB or more on other threads)
+[host] vk: texture pool: made (8 blocks of 256 MiB, memory type 1, 43 ms; MKW_VK_TEX_POOL_MIN)
+[host] vk_pipeline: max push descriptors 32; dynamic vertex input 1, depth clamp 1, polygon mode 1, blend enable 1, blend equation 1, write mask 1, alpha to coverage 1; cache C:\Games\mkw-recomp/pipeline-cache.bin
+[host] gfx_shader: prepared SPIR-V from C:\Games\mkw-recomp/spirv
+[host] gfx_shader: prewarm: 3834 shaders named by pipeline keys, 0 not found, on 17 threads
+[host] vk_pipeline: vertex output unions: 1606 vertex shaders, 7.93 locations each; 3312 pairs read 6.87 each
+[host] vk_pipeline: 1 background graphics pipeline workers
+[host] gfx_shader: vertex shader variant with integer inputs uint 0 sint 0x1
+[host] gfx_shader: vertex shader variant with integer inputs uint 0 sint 0x1
+[host] gfx_shader: vertex shader variant with integer inputs uint 0x40 sint 0
+[host] gfx_shader: vertex shader variant with integer inputs uint 0x80 sint 0
+[host] gfx_shader: vertex shader variant with integer inputs uint 0x40 sint 0
+[host] gfx_shader: vertex shader variant with integer inputs uint 0x40 sint 0
+[host] gfx_shader: vertex shader variant with integer inputs uint 0x40 sint 0
+[host] gfx_shader: vertex shader variant with integer inputs uint 0x40 sint 0
+[host] vk_pipeline: prebuild done: 3312 built, 0 failed, 0 asked for by a draw first; 309 ms after the device was ready
+[host] vk_pipeline: prewarm: 3312 records in C:\Games\mkw-recomp/pipeline-keys.bin: 3312 pipelines built, 0 failed, 0 already built, 0 dropped (shader not loaded); shaders 707 ms, pipelines 310 ms on 16 threads, total 1018 ms
+[host] boot: guest starts 1057 ms after process start (810 ms of it waiting for the prewarm)
+[host] gfx: monitor refresh rate 144.001 Hz
+[host] gfx: present mode mailbox (MKW_VK_PRESENT=mailbox)
+[host] gfx: window 1920x1080, swapchain 1920x1080 format 44
+[host] kernel: asynchronous preemption of virtual cores on, priority inheritance and preemption disable on (MKW_ASYNC_PREEMPT=0 turns all off); lifted code exe+0x754a11000-exe+0x76004e050
+[host] boot: ENTER nn::init::Start at sdk+0x115d70 (_ZN2nn4init5StartEmmPFvvES2_S2_+0), main thread 0x1001
+[host] ENTER nnosInitialize
+[host] RETURN nnosInitialize
+[host] boot: rtld callback: modules linked
+[host] ENTER nninitInitializeSdkModule
+[host] diag: host diagnostics
+[host] oe: application environment: local Windows process
+[host] aoc: no add-on content
+[host] err: error contexts stay local
+[host] diag: the host crash reporter observes aborts
+[host] pctl: no parental controls
+[host] RomFS ready: 205660 loose files under C:\Games\Mario Kart World 1.0.0\romfs, 0 overlays, 0 added, 10.10 s
+[host] RETURN nninitInitializeSdkModule
+[host] ENTER nninitStartup
+[host] mem: heap 0x200000000 bytes at 0x130000000
+[host] RETURN nninitStartup
+[host] boot: ENTER main DT_INIT (2866 init_array entries)
+[host] main data permission +0x30a8000 size 0x271000 perm 1
+boot: DT_INIT main state=2 (2866)
+[host] boot: ENTER subsdk0 DT_INIT (4 init_array entries)
+[host] subsdk0 data permission +0x36a000 size 0x7000 perm 1
+boot: DT_INIT subsdk0 state=2 (4)
+[host] boot: ENTER sdk DT_INIT (86 init_array entries)
+[host] sdk data permission +0xd43000 size 0x39000 perm 1
+boot: DT_INIT sdk state=2 (86)
+[host] ENTER nnMain
+[host] fs mount content: -> RomFS
+[host] zstd: 1 calls on the host, 0.0 MiB in, 0.0 MiB out, 0 ms (check mode: the guest decoder 0 ms); 0 to the guest decoder, 0 in place in the guest, 0 with the core given up
+[host] nv: graphics work memory 0+0 recorded
+[host] vk: ASTC compute decoder ready (pipeline built in 0.4 ms)
+[host] vk: ASTC textures: gpu (textureCompressionASTC_LDR 0)
+[host] nvn: an acquired image waits for the GPU to finish the frame that replaced it on (MKW_ACQUIRE_GPU)
+[host] oe: operation mode reported to the game: docked (performance boost)
+[host] vk: headroom: a 256 MiB block of memory type 1 allocated ahead (3 so far; 9 allocations of 32 MiB or more on other threads)
+[host] input: gamepad "Xbox 360 Controller" (rumble, no motion sensors, east button not labelled A)
+[host] hid: controllers initialized (player 1 full-key, 1 players with a controller)
+[host] kernel: interrupt 0x1005 p48 at exe+0x75f6ffcd2 rsp 0x2c6afff3d0 for 0x1001 p44
+[host] kernel: interrupt 0x1005 p48 at exe+0x75f6ffcd5 rsp 0x2c6afff460 for 0x1018 p47
+[host] kernel: interrupt 0x1005 p48 at exe+0x75f6ffcd5 rsp 0x2c6afff460 for 0x1001 p44
+[host] kernel: interrupt 0x1005 p48 at exe+0x7571a4a57 rsp 0x2c6afff290 for 0x1001 p44
+[host] nvn: CPU-visible physical pool 0000000168486000 (flags 0x18c, size 0xfa00000) keeps the game's storage
+[host] vk: replay on its own thread, at most one frame behind the game (MKW_REPLAY_ASYNC=1)
+[host] vk: MapVirtual 1 calls: 250.0 MiB mapped, 0.0 MiB unmapped; 250.0 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: texture aliases: a new image takes the live image's content
+[host] vk: render targets list their view formats (DCC): off
+[host] kernel: interrupt 0x1005 p48 at exe+0x757cf1edb rsp 0x2c6afff310 for 0x1001 p44
+[host] nvn: first buffer bind to shader stage 1
+[host] kernel: interrupt 0x1005 p48 at exe+0x7551b121c rsp 0x2c6afff220 for 0x1001 p44
+[host] zstd stream: 1 frames, 9 chunks on the host, 38.6 MiB in, 184.4 MiB out, 92 ms; 0 chunks in the guest decoder
+[host] kernel: interrupt 0x101c p50 at exe+0x756e817c8 rsp 0x2dcdfff510 for 0x100a p45
+[host] kernel: interrupt 0x101c p50 at exe+0x756e81780 rsp 0x2dcdfff510 for 0x100a p45
+[host] kernel: interrupt 0x101c p50 at exe+0x756e81773 rsp 0x2dcdfff510 for 0x100a p45
+[host] kernel: interrupt 0x1005 p48 at exe+0x756c73c49 rsp 0x2c6afff250 for 0x1001 p44
+[host] oe: focus handling mode 2 from main+0xc782e0
+[host] audio: SDL device '27G2G4 (NVIDIA High Definition Audio)' opened, 48000 Hz stereo float, prefill 20 ms
+[host] audren: renderer open 48000 Hz x240, mix buffers 72, voices 96, effects 16, submixes 11, sinks 2, splitters 96/384, REV15, work buffer 0x285789000+0x10000
+[host] audio: no device sink in use (2)
+[host] audren: RequestUpdate in=0x2857c7000+0x20350 out=0x2857f4ee0+0x2950 perf=0+0
+[host] audren: update REV15 sizes behavior=16 pools=12800 voices=37632 channels=10752 effects=3072 mixes=2384 sinks=640 perf=16 splitters=64544 render=0 total=131920 out=10576 perf_out=0
+[host] kernel: interrupt 0x1005 p48 at exe+0x75ee08ff1 rsp 0x2c6afff0c0 for 0x1001 p44
+[host] kernel: interrupt 0x1005 p48 at exe+0x756c73ea7 rsp 0x2c6afff320 for 0x1001 p44
+[host] nvn: first handle bind to shader stage 0
+[host] kernel: interrupt 0x1005 p48 at exe+0x75741f337 rsp 0x2c6afff3f0 for 0x1001 p44
+[host] nvn: CPU-visible physical pool 00000002A1230000 (flags 0x18c, size 0x3e90000) keeps the game's storage
+[host] vk: MapVirtual 2 calls: 250.1 MiB mapped, 0.0 MiB unmapped; 250.1 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 4 calls: 250.2 MiB mapped, 0.0 MiB unmapped; 250.1 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 8 calls: 250.4 MiB mapped, 0.0 MiB unmapped; 250.1 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 16 calls: 252.6 MiB mapped, 0.0 MiB unmapped; 251.9 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 32 calls: 262.6 MiB mapped, 0.0 MiB unmapped; 261.9 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 64 calls: 282.6 MiB mapped, 0.0 MiB unmapped; 281.9 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 128 calls: 315.1 MiB mapped, 0.0 MiB unmapped; 312.6 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 256 calls: 331.1 MiB mapped, 0.0 MiB unmapped; 312.6 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 512 calls: 363.1 MiB mapped, 0.0 MiB unmapped; 312.6 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] nvn: CPU-visible physical pool 00000002A92A0000 (flags 0x18c, size 0x3050000) keeps the game's storage
+[host] vk: MapVirtual 1024 calls: 395.2 MiB mapped, 0.0 MiB unmapped; 319.0 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 2048 calls: 459.2 MiB mapped, 0.0 MiB unmapped; 331.8 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 4096 calls: 587.2 MiB mapped, 0.0 MiB unmapped; 357.4 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] vk: MapVirtual 8192 calls: 843.2 MiB mapped, 0.0 MiB unmapped; 360.8 MiB of physical pages named, 0.0 MiB of chunks backed
+[host] nvn: CPU-visible physical pool 00000002AE0D0000 (flags 0x18c, size 0x7fe0000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002B60C0000 (flags 0x18c, size 0x1fee0000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002D5FB0000 (flags 0x18c, size 0x7fe0000) keeps the game's storage
+[host] host save recovery: deleted the last run's working copy (changes after its last Commit)
+[host] host save storage: C:\Games\mkw-recomp/profile/save/c752c3889ca29bec22fa7e8d71ba726f
+[host] host save working copy: 3 files, 1.2 MiB
+[host] fs mount save: -> C:\Games\mkw-recomp/profile/save-tx/work
+[host] game: present interval fixed at 1 (MKW_FPS 60; the game's value was 0)
+[host] input: gamepad layout xbox (pad_layout = auto)
+[host] hid: the game asked for its six-axis sensor (first handle 0x20003)
+[host] hid: rumble strength 130%, curve 0.60, triggers off
+[host] hid: the game asked for its vibration devices (first handle 0x3)
+[host] hid: the game started the six-axis sensor (handle 0x20003)
+[host] hid: the game initialized its vibration devices (handle 0x3)
+[host] hid: six-axis read with no motion samples: at rest (16 states)
+[host] nvn: timestamp reports written at the submit (MKW_REPORT_AT_SUBMIT=1)
+[host] nvn: the queues' work ordered by their event waits: off, a census only (MKW_QUEUE_WAITS)
+[host] nvn: submits wait for their replay and GPU work (MKW_SUBMIT_CATCHUP)
+[host] vk_rec: the replay's Vulkan commands are made by a recorder thread
+[host] vk: 1 lazy pools backed, 6 MiB (last 0x1355c4000+0x601000 flags 0x12)
+[host] vk: timestamp reports moved to their GPU end at the fence on (MKW_REPORT_GPU_END)
+[host] input: "Xbox 360 Controller" has no gyro and accelerometer: the six-axis sensor reads a controller at rest
+[host] time: device location America/Sao_Paulo
+[host] kernel: interrupt 0x1065 p44 at exe+0x7576d95f4 rsp 0x322003f490 for 0x105b p32
+[host] nvn2: CommandBufferSetRecordingMode 0 (ignored)
+[host] nvn: first buffer bind to shader stage 5
+[host] nvn2: nvnCommandBufferSetComputeOverlapMode (0x1) ignored
+[host] nvn: first handle bind to shader stage 2
+[host] nvn: first handle bind to shader stage 6
+[host] nvn: first handle bind to shader stage 7
+[host] prepo: play report kept local (not sent), 1 so far
+[host] hid: first vibration value from the game: left 0.00@160 Hz 0.00@320 Hz
+[host] vk: 2 lazy pools backed, 6 MiB (last 0x166253000+0x4000 flags 0x22)
+[host] vk: 3 lazy pools backed, 6 MiB (last 0x177ee6000+0x10000 flags 0x22)
+[host] vk: 4 lazy pools backed, 7 MiB (last 0x180218000+0x80000 flags 0x22)
+[host] vk_usnap: new arena of 4.0 MiB
+[host] vk_usnap: storage addresses in uniform blocks from the snapshot on (MKW_UBO_PTR_SNAP)
+[host] vk: headroom: a 27 MiB block of memory type 5 allocated ahead (4 so far; 9 allocations of 32 MiB or more on other threads)
+[host] vk: 1 physical pool chunks backed, 4 MiB (last: chunk 58 of 63 of pool 0x168486000+0xfa00000 flags 0x18c)
+[host] vk: texture 0x800eaffe00 (2560x1440 fmt 0x3f, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk_exec: draws skipped while their pipeline builds: those and full-screen draws (MKW_PIPE_SKIP=fullscreen)
+[host] vk_pipeline: a draw that waits for its pipeline has its libraries built in parallel on the workers, ahead of other jobs
+[host] vk_exec: MKW_SKIP_PROGRAMS: draws with a program starting c74a0d4e are skipped
+[host] mem: VRAM in use counted from VMA's device-local blocks (MKW_VRAM_USED)
+[host] vk: replay command buffer split every 64 draws (inside passes too), parts of at least 2000 us
+[host] vk: 8 lazy pools backed, 8 MiB (last 0x180197000+0x80000 flags 0x22)
+[host] vk: ASTC textures re-encoded as BC7: yes
+[host] vk: staging pool created (2 blocks of 64 MiB kept)
+[host] vk: ASTC fixed scratch of 64 MiB: made
+[host] vk: ASTC: 1 regions, 0.2 M texels decoded on the GPU so far; scratch allocations 0, 0.0 ms
+[host] kernel: interrupt 0x1053 p48 at exe+0x754c032ab rsp 0x310003f6d0 for 0x1062 p44
+[host] vk: 16 lazy pools backed, 12 MiB (last 0x17ff91000+0x80000 flags 0x22)
+[host] oe: the game finished its startup logo
+[host] vk: 2 physical pool chunks backed, 8 MiB (last: chunk 0 of 63 of pool 0x168486000+0xfa00000 flags 0x18c)
+[host] vk: texture 0x8000000000 (2560x1440 fmt 0x3f, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: 3 physical pool chunks backed, 12 MiB (last: chunk 3 of 63 of pool 0x168486000+0xfa00000 flags 0x18c)
+[host] vk: texture 0x8000f00200 (640x360 fmt 0x3f, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: texture 0x8000ff0400 (640x360 fmt 0x3f, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: texture 0x8000000000 (2560x1440 fmt 0x25, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: texture 0x8000f00200 (640x360 fmt 0x25, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: texture 0x8000ff0400 (640x360 fmt 0x25, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: 4 physical pool chunks backed, 16 MiB (last: chunk 57 of 63 of pool 0x168486000+0xfa00000 flags 0x18c)
+[host] vk: texture 0x800e64fa00 (960x540 fmt 0x25, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: the replay thread alone on processor 14, the others on 0x3fff (MKW_REPLAY_CORE)
+[host] menu: font atlas at 26.0 px, language names from 4 of 4 system fonts
+[host] vk_pipeline: gpl: 0 fast links (0 by workers; avg 0.00 ms, max 0.00 ms, 0 failed), 0 draws lookups found shader libraries missing (left to a worker), 0 optimised pipelines swapped in (0 queued low after their fast link), 0 drawing-thread links over 5 ms; 0 waiting draws built their libraries (avg 0.00 ms, max 0.00 ms)
+[host] vk_pipeline: gpl: vertex input libraries 0 (avg 0.00 ms, max 0.00 ms)
+[host] vk_pipeline: gpl: pre-rasterization libraries 0 (avg 0.00 ms, max 0.00 ms)
+[host] vk_pipeline: gpl: fragment shader libraries 0 (avg 0.00 ms, max 0.00 ms)
+[host] vk_pipeline: gpl: fragment output libraries 0 (avg 0.00 ms, max 0.00 ms)
+[host] kernel: interrupt 0x104b p45 at exe+0x7564ccb4c rsp 0x308003f8c0 for 0x1066 p44
+[host] kernel: interrupt 0x104b p45 at exe+0x7564cc960 rsp 0x308003f8c0 for 0x1051 p44
+[host] nvn: CPU-visible physical pool 000000028FAA0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000292FF0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294580000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000295D40000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000295DC0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298930000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn2: nvnCommandBufferBindShadingRateImage (0) ignored
+[host] nvn2: nvnCommandBufferShadingRateImagePalette (0) ignored
+[host] nvn2: nvnCommandBufferSetGeometryProcessingMode (0) ignored
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 16 dropped
+[host] nvn2: nvnCommandBufferSetStencilCullCriteria (0x3) ignored
+[host] vk: 32 lazy pools backed, 22 MiB (last 0x264ed1000+0x4000 flags 0x22)
+[host] vk: sparse: 512x512 layers 101: levels 2-1 in blocks (0 a layer), mip tail from 2: offset 0xa0000 size 0x10000 stride 0xb0000 flags 0
+[host] vk: sparse: tile slots up to 2816 MiB (MKW_SPARSE_MIB unset, from the GPU; 0 lifts it)
+[host] vk: sparse image 1: 0x800fa00000 512x512 layers 101 VkFormat 124, NVN tile 256x128 (2 levels, 10 pages a layer), Vulkan block 256x128 of 65536 bytes, mip tail from level 2; 1001 slots live
+[host] vk: texture 0x8001e06600 (3072x3072 fmt 0x32, 1 levels, 3 layers) cannot alias its pool memory; own memory instead
+[host] vk: texture 0x8005406800 (88x48 fmt 0x29, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: texture 0x8005c46a00 (88x48 fmt 0x1, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] gfx_shader: compute shader variant with integer images uint 0x2 sint 0
+[host] gfx_shader: integer images 0x10/0 not patched in
+[host] vk: sparse bind 1: 1010 blocks in 1 images (1010 blocks so far, 1001 slots live, 62 MiB, 0 written)
+[host] vk: 64 lazy pools backed, 49 MiB (last 0x22cd5f000+0x1000 flags 0x22)
+[host] vk: sparse image 2: 0x8553b50000 512x512 layers 1 VkFormat 77, NVN tile 128x128 (1 levels, 16 pages a layer), Vulkan block 128x128 of 65536 bytes, mip tail from level 1; 1017 slots live
+[host] vk: sparse image 3: 0x8553c50000 512x512 layers 1 VkFormat 9, NVN tile 256x256 (1 levels, 4 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 1; 1021 slots live
+[host] vk: sparse image 4: 0x8553c90000 512x512 layers 1 VkFormat 70, NVN tile 256x128 (1 levels, 8 pages a layer), Vulkan block 256x128 of 65536 bytes, mip tail from level 1; 1029 slots live
+[host] vk: sparse image 5: 0x8553d50000 512x512 layers 1 VkFormat 77, NVN tile 128x128 (1 levels, 16 pages a layer), Vulkan block 128x128 of 65536 bytes, mip tail from level 1; 1045 slots live
+[host] vk: sparse image 6: 0x8553e50000 512x512 layers 1 VkFormat 9, NVN tile 256x256 (1 levels, 4 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 1; 1049 slots live
+[host] vk: sparse image 7: 0x8553d10000 512x512 layers 1 VkFormat 10, NVN tile 256x256 (1 levels, 4 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 1; 1053 slots live
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 16 dropped
+[host] vk: sparse image 8: 0x801de90000 6144x6144 layers 2 VkFormat 38, NVN tile 128x128 (4 levels, 3060 pages a layer), Vulkan block 128x128 of 65536 bytes, mip tail from level 4; 1818 slots live
+[host] vk: texture 0x8000008200 (256x32 fmt 0x29, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: sparse bind 2: 3112 blocks in 7 images (4122 blocks so far, 1818 slots live, 113 MiB, 813 written)
+[host] vk: texture 0x8000208600 (256x32 fmt 0x29, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: texture 0x8000f00200 (2560x1440 fmt 0x3f, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: texture 0x8000000000 (2560x1440 fmt 0x35, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: indirect arguments as at the game's submit off (MKW_IND_SNAP)
+[host] vk: texture 0x8005dc6c00 (1280x720 fmt 0x3f, 1 levels, 1 layers) cannot alias its pool memory; own memory instead
+[host] vk: 8 physical pool chunks backed, 32 MiB (last: chunk 24 of 63 of pool 0x168486000+0xfa00000 flags 0x18c)
+[host] vk: task/mesh draws as mesh shaders
+[host] vk_pipeline: first task/mesh pipeline built (task + mesh)
+[host] vk: 16 physical pool chunks backed, 64 MiB (last: chunk 42 of 63 of pool 0x168486000+0xfa00000 flags 0x18c)
+[host] vk: 128 lazy pools backed, 54 MiB (last 0x2a5c0f000+0xc000 flags 0x24)
+[host] gfx_shader: compute shader variant with integer images uint 0x10 sint 0
+[host] vk: headroom: a 256 MiB block of memory type 1 allocated ahead (5 so far; 12 allocations of 32 MiB or more on other threads)
+[host] vk: ASTC: 1150 regions, 4.5 M texels decoded on the GPU so far; scratch allocations 0, 0.0 ms
+[host] vk: sparse: 8192x8192 layers 68: levels 5-5 in blocks (1 a layer), mip tail from 6: offset 0x5550000 size 0x10000 stride 0x5560000 flags 0
+[host] vk: sparse image 9: 0x8273c30000 8192x8192 layers 68 VkFormat 146, NVN tile 512x512 (5 levels, 341 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 6; 9898 slots live
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 16 dropped
+[host] vk: ASTC 8192x8192 (fmt 0x8e) level 0 layer 0 x1 -> BC7 level 0 layer 0 at 0,0: decoded
+[host] vk: ASTC 4096x4096 (fmt 0x8e) level 1 layer 0 x1 -> BC7 level 1 layer 0 at 0,0: decoded
+[host] vk: ASTC 2048x2048 (fmt 0x8e) level 2 layer 0 x1 -> BC7 level 2 layer 0 at 0,0: decoded
+[host] vk: ASTC 1024x1024 (fmt 0x8e) level 3 layer 0 x1 -> BC7 level 3 layer 0 at 0,0: decoded
+[host] vk: ASTC 512x512 (fmt 0x8e) level 4 layer 0 x1 -> BC7 level 4 layer 0 at 0,0: decoded
+[host] vk: ASTC 256x256 (fmt 0x8e) level 5 layer 0 x1 -> BC7 level 5 layer 0 at 0,0: decoded
+[host] vk: sparse: first write to level 5 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: ASTC 128x128 (fmt 0x8e) level 6 layer 0 x1 -> BC7 level 6 layer 0 at 0,0: decoded
+[host] vk: sparse: first write to level 6 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: ASTC 64x64 (fmt 0x8e) level 7 layer 0 x1 -> BC7 level 7 layer 0 at 0,0: decoded
+[host] vk: sparse: first write to level 7 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 8 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 9 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 10 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 11 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: ASTC: 2048 regions, 518.2 M texels decoded on the GPU so far; scratch allocations 10, 6.5 ms
+[host] vk: headroom: a 256 MiB block of memory type 1 allocated ahead (6 so far; 14 allocations of 32 MiB or more on other threads)
+[host] vk: large image 85 MiB: addr 0x181bbdc00 nvn fmt 0x50 8192x8192x1 target 1 levels 14 layers 1 flags 0x4
+[host] vk: sparse: 8192x8192 layers 68: levels 6-5 in blocks (0 a layer), mip tail from 6: offset 0x5550000 size 0x10000 stride 0x5560000 flags 0
+[host] vk: sparse image 10: 0x82ce710000 8192x8192 layers 68 VkFormat 143, NVN tile 256x256 (6 levels, 1365 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 6; 18046 slots live
+[host] vk: sparse: first write to level 6 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 7 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 8 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 9 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 10 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 11 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: 8192x8192 layers 68: levels 5-5 in blocks (1 a layer), mip tail from 6: offset 0x5550000 size 0x10000 stride 0x5560000 flags 0
+[host] vk: sparse image 11: 0x84391f0000 8192x8192 layers 68 VkFormat 146, NVN tile 512x512 (5 levels, 341 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 6; 26126 slots live
+[host] vk: sparse: first write to level 5 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 6 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 7 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 8 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 9 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 10 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 11 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: headroom: a 256 MiB block of memory type 1 allocated ahead (7 so far; 19 allocations of 32 MiB or more on other threads)
+[host] vk: sparse bind 3: 24308 blocks in 3 images (28430 blocks so far, 26126 slots live, 1632 MiB, 25121 written)
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 16 dropped
+[host] vk: ASTC: 3075 regions, 1088.4 M texels decoded on the GPU so far; scratch allocations 20, 15.0 ms
+[host] vk: sparse image 8: 0x84a91d0000 8192x8192 layers 1 VkFormat 77, NVN tile 128x128 (5 levels, 5456 pages a layer), Vulkan block 128x128 of 65536 bytes, mip tail from level 5; 26114 slots live
+[host] vk: sparse bind 4: 16 blocks in 1 images (28446 blocks so far, 26114 slots live, 1632 MiB, 25093 written)
+[host] vk: sparse image 9: 0x84fe650000 512x512 layers 1 VkFormat 10, NVN tile 256x256 (1 levels, 4 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 1; 26114 slots live
+[host] vk: sparse image 9: 0x8493cd0000 8192x8192 layers 1 VkFormat 77, NVN tile 128x128 (5 levels, 5456 pages a layer), Vulkan block 128x128 of 65536 bytes, mip tail from level 5; 26114 slots live
+[host] vk: sparse image 10: 0x84d3c10000 16384x16384 layers 1 VkFormat 9, NVN tile 256x256 (6 levels, 5460 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 6; 26118 slots live
+[host] vk: sparse image 11: 0x84fe690000 512x512 layers 1 VkFormat 10, NVN tile 256x256 (1 levels, 4 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 1; 26102 slots live
+[host] vk: sparse image 11: 0x84be6d0000 16384x16384 layers 1 VkFormat 9, NVN tile 256x256 (6 levels, 5460 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 6; 26102 slots live
+[host] vk: sparse bind 8: 4 blocks in 1 images (28478 blocks so far, 26102 slots live, 1631 MiB, 25077 written)
+[host] vk: sparse image 12: 0x8513bd0000 8192x8192 layers 1 VkFormat 77, NVN tile 128x128 (5 levels, 5456 pages a layer), Vulkan block 128x128 of 65536 bytes, mip tail from level 5; 26114 slots live
+[host] vk: sparse image 13: 0x84fe6d0000 8192x8192 layers 1 VkFormat 77, NVN tile 128x128 (5 levels, 5456 pages a layer), Vulkan block 128x128 of 65536 bytes, mip tail from level 5; 26114 slots live
+[host] kernel: interrupt 0x1037 p52 at exe+0x756ef6444 rsp 0x2f7dfff6e0 for 0x1065 p44
+[host] vk: 256 lazy pools backed, 150 MiB (last 0x2a8901000+0x4000 flags 0x24)
+[host] kernel: interrupt 0x1037 p52 at exe+0x754c0819e rsp 0x2f7dfff7e0 for 0x1065 p44
+[host] kernel: interrupt 0x1037 p52 at exe+0x75f6ffced rsp 0x2f7dfff8a0 for 0x1065 p44
+[host] vk: sparse: 8192x8192 layers 68: levels 5-5 in blocks (1 a layer), mip tail from 6: offset 0x5550000 size 0x10000 stride 0x5560000 flags 0
+[host] vk: sparse image 14: 0x8053b90000 8192x8192 layers 68 VkFormat 146, NVN tile 512x512 (5 levels, 341 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 6; 26114 slots live
+[host] vk: sparse: first write to level 5 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 6 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 7 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 8 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 9 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 10 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: 8192x8192 layers 68: levels 6-5 in blocks (0 a layer), mip tail from 6: offset 0x5550000 size 0x10000 stride 0x5560000 flags 0
+[host] vk: sparse image 15: 0x80ae670000 8192x8192 layers 68 VkFormat 143, NVN tile 256x256 (6 levels, 1365 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 6; 26114 slots live
+[host] vk: sparse: first write to level 6 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 7 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 8 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 9 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 10 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: 8192x8192 layers 68: levels 5-5 in blocks (1 a layer), mip tail from 6: offset 0x5550000 size 0x10000 stride 0x5560000 flags 0
+[host] vk: sparse image 16: 0x8219150000 8192x8192 layers 68 VkFormat 146, NVN tile 512x512 (5 levels, 341 pages a layer), Vulkan block 256x256 of 65536 bytes, mip tail from level 6; 26114 slots live
+[host] vk: sparse: first write to level 5 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 6 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 7 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 8 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 9 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] vk: sparse: first write to level 10 of 8192x8192 layers 68 (outside the tiles; has memory)
+[host] kernel: interrupt 0x1037 p52 at exe+0x756ef6488 rsp 0x2f7dfff6e0 for 0x1065 p44
+[host] nvn: CPU-visible physical pool 000000028FBB0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] kernel: interrupt 0x1037 p52 at exe+0x75f6ffcd9 rsp 0x2f7dfff8a0 for 0x1065 p44
+[host] nvn: CPU-visible physical pool 0000000293040000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294610000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000295ED0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] vk: sparse bind 16: 1344 blocks in 1 images (34070 blocks so far, 26142 slots live, 1633 MiB, 25101 written)
+[host] nvn: CPU-visible physical pool 0000000298980000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 000000028FCC0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293090000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002946A0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 000000028FDD0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] kernel: interrupt 0x104b p45 at exe+0x7564cc86c rsp 0x308003f8c0 for 0x1061 p44
+[host] nvn: CPU-visible physical pool 00000002930E0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000295FE0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002989D0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294730000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 000000028FEE0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 000000028FFF0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290100000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] vk: sparse bind 32: 32 blocks in 2 images (42378 blocks so far, 26210 slots live, 1638 MiB, 25169 written)
+[host] kernel: interrupt 0x1037 p52 at exe+0x75f6ffce1 rsp 0x2f7dfff8a0 for 0x1065 p44
+[host] nvn: CPU-visible physical pool 0000000290210000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293130000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293180000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002931D0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293220000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002947C0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294850000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002948E0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294970000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002960F0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298A20000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] kernel: interrupt 0x1037 p52 at exe+0x756ef64da rsp 0x2f7dfff6e0 for 0x1065 p44
+[host] nvn: CPU-visible physical pool 0000000293270000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002932C0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293310000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293360000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] kernel: interrupt 0x104b p45 at exe+0x7564cc4c4 rsp 0x308003f8c0 for 0x1016 p44
+[host] nvn: CPU-visible physical pool 0000000296200000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296310000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296420000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296530000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298A70000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298AC0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298B10000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298B60000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 16 dropped
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 16 dropped
+[host] vk: 512 lazy pools backed, 183 MiB (last 0x56789c000+0x16000 flags 0x24)
+[host] vk: ASTC: 4102 regions, 1590.7 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 5432 regions, 1593.5 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 6712 regions, 1593.7 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 7992 regions, 1593.9 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 9272 regions, 1594.1 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 11064 regions, 1597.2 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 12856 regions, 1600.4 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 14136 regions, 1600.6 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 15416 regions, 1600.8 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 16696 regions, 1601.0 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 17976 regions, 1601.2 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 18984 regions, 1602.8 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 19992 regions, 1604.5 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 21000 regions, 1605.8 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 22008 regions, 1607.2 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 22728 regions, 1607.3 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] kernel: interrupt 0x1043 p46 at exe+0x756fca790 rsp 0x303dfff370 for 0x1009 p45
+[host] vk: ASTC: 24456 regions, 1609.1 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 25464 regions, 1610.8 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 26184 regions, 1610.9 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 26904 regions, 1611.1 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 28344 regions, 1611.3 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 29352 regions, 1613.1 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 30360 regions, 1614.9 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 31224 regions, 1615.2 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 32088 regions, 1615.6 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 33096 regions, 1616.4 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 34104 regions, 1617.2 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 34817 regions, 1623.2 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] kernel: interrupt 0x1037 p52 at exe+0x756ef6484 rsp 0x2f7dfff6e0 for 0x1050 p44
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 16 dropped
+[host] game: speed 0.72x over 5.0 s (217 frames, 0 interval changes, MKW_FPS 60)
+[host] kernel: interrupt 0x104b p45 at exe+0x7564cc7ec rsp 0x308003f8c0 for 0x1061 p44
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 16 dropped
+[host] vk: ASTC: 36217 regions, 1734.5 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: large image 141 MiB: addr 0x19722a000 nvn fmt 0x80 1434x1434x1 target 4 levels 11 layers 46 flags 0x4
+[host] vk: ASTC: 36867 regions, 1875.8 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 37888 regions, 1925.4 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 38915 regions, 1935.3 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] nvn: CPU-visible physical pool 0000000298BB0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298C00000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298C50000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298CA0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] vk: ASTC: 39943 regions, 2051.1 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 174 of 256 images; BC7 for 4096+ 5, no CPU storage 0, GPU-only 0, sparse 0, alpha 77 (BC1 for alpha 1 decoded in every texel 153, 23 ms decoding)
+[host] vk: ASTC: 40963 regions, 2189.0 M texels decoded on the GPU so far; scratch allocations 32, 24.2 ms
+[host] vk: ASTC: 41984 regions, 2296.7 M texels decoded on the GPU so far; scratch allocations 33, 24.7 ms
+[host] kernel: interrupt 0x1037 p52 at exe+0x75f6ffcd9 rsp 0x2f7dfff8a0 for 0x1065 p44
+[host] kernel: interrupt 0x1037 p52 at exe+0x754c3df96 rsp 0x2f7dfff760 for 0x1065 p44
+[host] kernel: interrupt 0x1053 p48 at exe+0x7573eaa66 rsp 0x310003fa20 for 0x1004 p30
+[host] kernel: interrupt 0x1053 p48 at exe+0x7573eaab2 rsp 0x310003fa20 for 0x1062 p44
+[host] kernel: interrupt 0x1037 p52 at exe+0x75f6ffced rsp 0x2f7dfff8a0 for 0x1065 p44
+[host] kernel: interrupt 0x104b p45 at exe+0x7564ccaec rsp 0x308003f8c0 for 0x1051 p44
+[host] kernel: interrupt 0x104b p45 at exe+0x7564cc39e rsp 0x308003f8c0 for 0x1016 p44
+[host] vk: ASTC: 43018 regions, 2554.0 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] kernel: interrupt 0x1037 p52 at exe+0x754c08cca rsp 0x2f7dfff7e0 for 0x1015 p44
+[host] kernel: interrupt 0x104b p45 at exe+0x7564cc5e4 rsp 0x308003f8c0 for 0x1016 p44
+[host] gfx_shader: compute shader variant with integer images uint 0x6000 sint 0
+[host] kernel: interrupt 0x1037 p52 at exe+0x754c08cca rsp 0x2f7dfff7e0 for 0x1065 p44
+[host] kernel: interrupt 0x1037 p52 at exe+0x754c08ee8 rsp 0x2f7dfff7e0 for 0x1060 p44
+[host] gfx_shader: compute shader variant with integer images uint 0x3000 sint 0
+[host] gfx_shader: compute shader variant with integer images uint 0x4000 sint 0
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 338 of 512 images; BC7 for 4096+ 11, no CPU storage 0, GPU-only 0, sparse 0, alpha 163 (BC1 for alpha 1 decoded in every texel 306, 72 ms decoding)
+[host] vk: ASTC: 45544 regions, 2598.9 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 47336 regions, 2602.0 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 48344 regions, 2603.6 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 49352 regions, 2605.3 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 50360 regions, 2606.1 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 51368 regions, 2606.9 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 53245 regions, 2613.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 55037 regions, 2616.8 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 56045 regions, 2618.5 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 57053 regions, 2620.1 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 58061 regions, 2620.9 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 59069 regions, 2621.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 60149 regions, 2628.8 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 61157 regions, 2630.5 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 62273 regions, 2642.3 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 63281 regions, 2644.0 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 64289 regions, 2645.8 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 65297 regions, 2647.5 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 66315 regions, 2649.8 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 67451 regions, 2662.3 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 68459 regions, 2664.0 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 69467 regions, 2665.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 70475 regions, 2667.5 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 71493 regions, 2669.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 71683 regions, 2675.1 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 72819 regions, 2679.0 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 73827 regions, 2680.4 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 75267 regions, 2680.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 76131 regions, 2681.1 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 76995 regions, 2681.5 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 78062 regions, 2684.2 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 79070 regions, 2685.5 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 80510 regions, 2685.9 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 81374 regions, 2686.3 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 82238 regions, 2686.6 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 83023 regions, 2687.6 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] glyphs: button sheet 0x553603000: xbox icons, 25 cells redrawn
+[host] nvn: queue order in the last 1500 submits: 2010 event waits, 1090 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 4827 other reports, 4285 event signals
+[host] gfx_shader: fragment shader variant with integer outputs uint 0x1 sint 0
+[host] vk: ASTC: 83976 regions, 2722.8 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] game: speed 0.83x over 5.0 s (249 frames, 0 interval changes, MKW_FPS 60)
+[host] vk: ASTC: 84996 regions, 2835.0 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 504 of 768 images; BC7 for 4096+ 11, no CPU storage 0, GPU-only 0, sparse 0, alpha 253 (BC1 for alpha 1 decoded in every texel 461, 102 ms decoding)
+[host] vk: ASTC: 86020 regions, 2900.8 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 88108 regions, 2921.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 89900 regions, 2924.8 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] kernel: frame 600: asynchronous preemption: 106 interrupted, 106 cores given up there; refused: 1377 in a host call, 4 outside game code, 0 preemption disabled, 0 failed; 32610 waits ended in the first spin; SVC 0x36 0
+[host] mem: mirror frame 600: pools 473, 241.7 MiB device-local; stay imported: budget 0 (0.0 MiB), untracked 0, overlapping 0, failed 0; per frame: submits 4.09, syncs 164.1, upload 10.634 MiB in 94.3 ranges, first use 0.79 pools 0.403 MiB, write-back 9.479 MiB in 105.2 ranges, flush calls 127.8 (5.066 MiB), queries 40.1 pre-snap (223.9 MiB) + 56.8 sync, prologues 3.73, tracking cpu 2.061 ms (pre-snap 1.431, syncs 0.629)
+[host] mem: census at frame 600: import 4150 pools 3791.0 MiB (0 without a GPU buffer), physical 55 pools 1153.8 MiB, virtual 31 pools 21819.3 MiB of address space
+[host] mem:   import 0x22 CPU_UNCACHED|GPU_CACHED: 1783 pools, 114.5 MiB
+[host] mem:   import 0x21 CPU_NO_ACCESS|GPU_CACHED: 610 pools, 410.5 MiB
+[host] mem:   import 0x12 CPU_UNCACHED|GPU_UNCACHED: 8 pools, 104.5 MiB
+[host] mem:   import 0x24 CPU_CACHED|GPU_CACHED: 1387 pools, 2990.7 MiB
+[host] mem:   import 0x64 CPU_CACHED|GPU_CACHED|SHADER_CODE: 86 pools, 71.3 MiB
+[host] mem:   import 0x62 CPU_UNCACHED|GPU_CACHED|SHADER_CODE: 12 pools, 17.4 MiB
+[host] mem:   physical 0x18c CPU_CACHED|GPU_NO_ACCESS|COMPRESSIBLE|PHYSICAL: 55 pools, 1153.8 MiB
+[host] mem:   import 0xa1 CPU_NO_ACCESS|GPU_CACHED|COMPRESSIBLE: 264 pools, 82.0 MiB
+[host] mem:   virtual 0x2a1 CPU_NO_ACCESS|GPU_CACHED|COMPRESSIBLE|VIRTUAL: 31 pools, 21819.3 MiB
+[host] mem: traffic per frame over 600 frames, MiB (bound ranges, not bytes read): class: vertex index uniform storage indirect copy-src gpu-write cpu-read
+[host] mem:   host CPU_NO_ACCESS: 0.00 0.00 0.00 0.00 0.000 0.00 0.00 0.000
+[host] mem:   host CPU_UNCACHED: 0.07 0.00 126.04 1417.54 0.000 0.00 0.00 0.000
+[host] mem:   host CPU_CACHED: 57.69 1.95 0.00 5573.39 0.007 0.00 0.00 0.000
+[host] mem:   device: 0.00 0.00 0.00 0.00 0.000 0.00 0.00 0.000
+[host] mem:   scratch: 0.00 0.00 43.51 0.00 0.000 0.00 0.00 0.000
+[host] menu: 0.090 ms CPU per open frame (layout and recording, mean of 600)
+[host] vk: ASTC: 90118 regions, 2945.2 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] nvn: CPU-visible physical pool 00000002933B0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293400000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298CF0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298D40000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: queue order in the last 1500 submits: 3750 event waits, 1875 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 7504 other reports, 5625 event signals
+[host] game: speed 1.00x over 5.0 s (300 frames, 0 interval changes, MKW_FPS 60)
+[host] vk: ASTC: 91141 regions, 3019.9 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 93773 regions, 3133.6 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 95565 regions, 3136.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 97449 regions, 3154.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 99241 regions, 3157.8 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 99333 regions, 3172.7 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 661 of 1024 images; BC7 for 4096+ 17, no CPU storage 0, GPU-only 0, sparse 0, alpha 346 (BC1 for alpha 1 decoded in every texel 611, 136 ms decoding)
+[host] vk: 1024 lazy pools backed, 290 MiB (last 0x23a00a000+0x4000 flags 0x22)
+[host] vk: ASTC: 100355 regions, 3227.1 M texels decoded on the GPU so far; scratch allocations 40, 27.1 ms
+[host] vk: ASTC: 101380 regions, 3374.2 M texels decoded on the GPU so far; scratch allocations 43, 28.0 ms
+[host] vk: ASTC: 102410 regions, 3578.4 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 833 of 1280 images; BC7 for 4096+ 21, no CPU storage 0, GPU-only 0, sparse 0, alpha 426 (BC1 for alpha 1 decoded in every texel 774, 182 ms decoding)
+[host] vk: ASTC: 103432 regions, 3711.5 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] nvn: CPU-visible physical pool 0000000293450000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002934A0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298D90000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298DE0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] vk: ASTC: 104451 regions, 3776.6 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] game: speed 0.95x over 5.0 s (285 frames, 0 interval changes, MKW_FPS 60)
+[host] vk_pipeline: gpl: 5 fast links (5 by workers; avg 0.01 ms, max 0.02 ms, 0 failed), 26 draws lookups found shader libraries missing (left to a worker), 5 optimised pipelines swapped in (5 queued low after their fast link), 0 drawing-thread links over 5 ms; 0 waiting draws built their libraries (avg 0.00 ms, max 0.00 ms)
+[host] vk_pipeline: gpl: vertex input libraries 1 (avg 0.01 ms, max 0.01 ms)
+[host] vk_pipeline: gpl: pre-rasterization libraries 5 (avg 34.01 ms, max 92.39 ms)
+[host] vk_pipeline: gpl: fragment shader libraries 5 (avg 58.76 ms, max 87.53 ms)
+[host] vk_pipeline: gpl: fragment output libraries 2 (avg 0.01 ms, max 0.01 ms)
+[host] nvn: queue order in the last 1500 submits: 3750 event waits, 1875 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 7504 other reports, 5625 event signals
+[host] kernel: frame 1200: asynchronous preemption: 220 interrupted, 220 cores given up there; refused: 1551 in a host call, 9 outside game code, 0 preemption disabled, 0 failed; 48614 waits ended in the first spin; SVC 0x36 0
+[host] menu: 0.038 ms CPU per open frame (layout and recording, mean of 600)
+[host] vk: ASTC: 106000 regions, 3810.3 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 107008 regions, 3812.1 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] game: speed 0.99x over 5.0 s (296 frames, 0 interval changes, MKW_FPS 60)
+[host] vk: ASTC: 107524 regions, 3891.1 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] nvn: CPU-visible physical pool 0000000290320000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294A00000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296640000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290430000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] vk: sparse bind 64: 32 blocks in 2 images (50903 blocks so far, 26566 slots live, 1660 MiB, 25413 written)
+[host] nvn: CPU-visible physical pool 0000000294A90000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296750000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290540000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290650000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294B20000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294BB0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296860000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296970000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] vk: headroom: a 256 MiB block of memory type 1 allocated ahead (8 so far; 26 allocations of 32 MiB or more on other threads)
+[host] vk: ASTC: 109334 regions, 3895.8 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 110198 regions, 3896.0 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 110684 regions, 3918.1 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 111773 regions, 3925.9 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 112781 regions, 3927.7 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] nvn: queue order in the last 1500 submits: 3750 event waits, 1875 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 7512 other reports, 5625 event signals
+[host] game: speed 1.00x over 5.0 s (300 frames, 0 interval changes, MKW_FPS 60)
+[host] nvn: CPU-visible physical pool 0000000290760000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290870000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294C40000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294CD0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296A80000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296B90000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] vk: ASTC: 114126 regions, 3943.4 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 114702 regions, 3943.5 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] nvn: CPU-visible physical pool 0000000290980000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290A90000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294D60000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294DF0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296CA0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296DB0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 998 of 1536 images; BC7 for 4096+ 21, no CPU storage 0, GPU-only 0, sparse 0, alpha 517 (BC1 for alpha 1 decoded in every texel 920, 204 ms decoding)
+[host] vk: ASTC: 115714 regions, 3978.1 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 117621 regions, 4016.7 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 118901 regions, 4016.8 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] vk: ASTC: 119816 regions, 4105.9 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] nvn: asynchronous replay at submit 7200: 0 recording clones so far, 0 copies waiting for the replay
+[host] vk: ASTC: 120835 regions, 4197.4 M texels decoded on the GPU so far; scratch allocations 47, 29.6 ms
+[host] nvn: acquires since the last line: 1800, 0 waited for the GPU, 0.0 ms waited per acquire
+[host] kernel: frame 1800: asynchronous preemption: 316 interrupted, 316 cores given up there; refused: 1614 in a host call, 16 outside game code, 0 preemption disabled, 0 failed; 65533 waits ended in the first spin; SVC 0x36 0
+[host] vk: replay queue at frame 1800: pool_fini 379 calls, 21 waited 75.8 ms; map_virtual 9311 calls, 0 waited 0.0 ms; texture_release (queued) 29537 calls, 0 waited 0.0 ms; program_release 30 calls, 1 waited 6.8 ms; write_texels 44 calls, 0 waited 0.0 ms; frame bound 1800 calls, 0 waited 0.0 ms
+[host] mem: mirror frame 1800: pools 695, 356.3 MiB device-local; stay imported: budget 0 (0.0 MiB), untracked 0, overlapping 0, failed 0; per frame: submits 4.00, syncs 260.3, upload 16.411 MiB in 149.7 ranges, first use 0.19 pools 0.096 MiB, write-back 15.362 MiB in 188.8 ranges, flush calls 21.5 (1.002 MiB), queries 64.0 pre-snap (256.6 MiB) + 83.8 sync, prologues 4.85, tracking cpu 1.665 ms (pre-snap 0.830, syncs 0.834)
+[host] mem: census at frame 1800: import 4410 pools 3853.8 MiB (0 without a GPU buffer), physical 87 pools 1175.8 MiB, virtual 31 pools 21819.3 MiB of address space
+[host] mem:   import 0x22 CPU_UNCACHED|GPU_CACHED: 1907 pools, 117.0 MiB
+[host] mem:   import 0x21 CPU_NO_ACCESS|GPU_CACHED: 645 pools, 430.7 MiB
+[host] mem:   import 0x12 CPU_UNCACHED|GPU_UNCACHED: 8 pools, 104.5 MiB
+[host] mem:   import 0x24 CPU_CACHED|GPU_CACHED: 1488 pools, 3030.8 MiB
+[host] mem:   import 0x64 CPU_CACHED|GPU_CACHED|SHADER_CODE: 86 pools, 71.3 MiB
+[host] mem:   import 0x62 CPU_UNCACHED|GPU_CACHED|SHADER_CODE: 12 pools, 17.4 MiB
+[host] mem:   physical 0x18c CPU_CACHED|GPU_NO_ACCESS|COMPRESSIBLE|PHYSICAL: 87 pools, 1175.8 MiB
+[host] mem:   import 0xa1 CPU_NO_ACCESS|GPU_CACHED|COMPRESSIBLE: 264 pools, 82.0 MiB
+[host] mem:   virtual 0x2a1 CPU_NO_ACCESS|GPU_CACHED|COMPRESSIBLE|VIRTUAL: 31 pools, 21819.3 MiB
+[host] mem: traffic per frame over 600 frames, MiB (bound ranges, not bytes read): class: vertex index uniform storage indirect copy-src gpu-write cpu-read
+[host] mem:   host CPU_NO_ACCESS: 0.00 0.00 0.00 0.00 0.000 0.00 0.00 0.000
+[host] mem:   host CPU_UNCACHED: 0.26 0.00 338.33 3617.43 0.000 0.00 0.00 0.000
+[host] mem:   host CPU_CACHED: 83.22 2.28 0.00 9173.14 0.010 0.00 0.00 0.000
+[host] mem:   device: 0.00 0.00 0.00 0.00 0.000 0.00 0.00 0.000
+[host] mem:   scratch: 0.00 0.00 82.09 0.00 0.000 0.00 0.00 0.000
+[host] menu: 0.037 ms CPU per open frame (layout and recording, mean of 600)
+[host] vk_usnap: 3600 submissions with a snapshot, 0 without; per submission 503 ranges, 483.9 KiB copied in 0.468 ms (0.387 of it collecting and merging the ranges), 2828 uniform bindings from the copy, 0.5 dropped by GPU writes, 0.0 left out (GPU writes in flight), 0.0 refused (not an imported pool), 0.0 regions from the submit's copy (MKW_USNAP_AT_SUBMIT)
+[host] nvn: queue order in the last 1500 submits: 3750 event waits, 1875 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 7515 other reports, 5625 event signals
+[host] hid: first non-zero vibration from the game: left 0.32@182 Hz 0.04@258 Hz
+[host] game: speed 0.98x over 5.0 s (295 frames, 0 interval changes, MKW_FPS 60)
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 1165 of 1792 images; BC7 for 4096+ 23, no CPU storage 0, GPU-only 0, sparse 0, alpha 604 (BC1 for alpha 1 decoded in every texel 1072, 234 ms decoding)
+[host] nvn: CPU-visible physical pool 0000000290BA0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294E80000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296EC0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002934F0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298E30000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293540000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298E80000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293590000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002935E0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298ED0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298F20000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] game: speed 0.97x over 5.0 s (293 frames, 0 interval changes, MKW_FPS 60)
+[host] nvn: queue order in the last 1500 submits: 3750 event waits, 1875 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 7539 other reports, 5625 event signals
+[host] vk_pipeline: gpl: 8 fast links (8 by workers; avg 0.03 ms, max 0.17 ms, 0 failed), 370 draws lookups found shader libraries missing (left to a worker), 8 optimised pipelines swapped in (8 queued low after their fast link), 0 drawing-thread links over 5 ms; 0 waiting draws built their libraries (avg 0.00 ms, max 0.00 ms)
+[host] vk_pipeline: gpl: vertex input libraries 1 (avg 0.01 ms, max 0.01 ms)
+[host] vk_pipeline: gpl: pre-rasterization libraries 8 (avg 45.66 ms, max 92.39 ms)
+[host] vk_pipeline: gpl: fragment shader libraries 8 (avg 52.83 ms, max 97.97 ms)
+[host] vk_pipeline: gpl: fragment output libraries 3 (avg 0.01 ms, max 0.01 ms)
+[host] vk: ASTC: 123351 regions, 4464.2 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 124887 regions, 4464.6 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 126679 regions, 4467.8 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 128471 regions, 4470.9 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 130263 regions, 4472.3 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 132055 regions, 4473.7 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 132631 regions, 4473.7 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 133207 regions, 4473.8 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 134359 regions, 4473.8 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 135799 regions, 4474.1 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 136519 regions, 4474.2 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 137239 regions, 4474.3 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 138967 regions, 4475.3 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 139543 regions, 4475.3 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 140289 regions, 4480.0 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] kernel: frame 2400: asynchronous preemption: 411 interrupted, 411 cores given up there; refused: 1673 in a host call, 20 outside game code, 0 preemption disabled, 0 failed; 81455 waits ended in the first spin; SVC 0x36 0
+[host] menu: 0.038 ms CPU per open frame (layout and recording, mean of 600)
+[host] game: speed 0.98x over 5.0 s (296 frames, 0 interval changes, MKW_FPS 60)
+[host] nvn: queue order in the last 1500 submits: 3362 event waits, 1778 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 8380 other reports, 5431 event signals
+[host] game: speed 1.00x over 5.0 s (301 frames, 0 interval changes, MKW_FPS 60)
+[host] fs commit save: 3 files, 1 changed (0.8 MiB written), 2 unchanged linked, in 12 ms
+[host] vk: ASTC: 141312 regions, 4557.9 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] nvn: queue order in the last 1500 submits: 3602 event waits, 1838 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 15110 other reports, 5551 event signals
+[host] kernel: frame 3000: asynchronous preemption: 468 interrupted, 468 cores given up there; refused: 1683 in a host call, 22 outside game code, 0 preemption disabled, 0 failed; 95920 waits ended in the first spin; SVC 0x36 0
+[host] menu: 0.040 ms CPU per open frame (layout and recording, mean of 600)
+[host] game: speed 1.00x over 5.0 s (301 frames, 0 interval changes, MKW_FPS 60)
+[host] nvn: CPU-visible physical pool 0000000290CB0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290DC0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293630000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293680000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] vk: ASTC: 143052 regions, 4582.6 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 144076 regions, 4582.6 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 145356 regions, 4582.8 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 146636 regions, 4583.0 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 147916 regions, 4583.2 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 149196 regions, 4583.4 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 150476 regions, 4583.5 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 151756 regions, 4583.6 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 153196 regions, 4583.8 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 153916 regions, 4583.8 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 154636 regions, 4583.9 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 156076 regions, 4584.1 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 157228 regions, 4584.2 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 158092 regions, 4584.2 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 158812 regions, 4584.3 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 160108 regions, 4584.4 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 161404 regions, 4584.5 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC: 162124 regions, 4584.6 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 1267 of 2048 images; BC7 for 4096+ 23, no CPU storage 0, GPU-only 0, sparse 0, alpha 758 (BC1 for alpha 1 decoded in every texel 1170, 253 ms decoding)
+[host] vk: ASTC: 162818 regions, 4610.5 M texels decoded on the GPU so far; scratch allocations 53, 33.6 ms
+[host] nvn: CPU-visible physical pool 0000000294F10000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294FA0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] vk: sparse bind 128: 1344 blocks in 1 images (68255 blocks so far, 26974 slots live, 1685 MiB, 25825 written)
+[host] nvn: CPU-visible physical pool 0000000296FD0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] vk: headroom: a 256 MiB block of memory type 1 allocated ahead (9 so far; 30 allocations of 32 MiB or more on other threads)
+[host] nvn: queue order in the last 1500 submits: 2370 event waits, 1530 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 2744 other reports, 4935 event signals
+[host] nvn: CPU-visible physical pool 00000002970E0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] fs commit save: 3 files, 1 changed (0.8 MiB written), 2 unchanged linked, in 13 ms
+[host] nvn: CPU-visible physical pool 0000000298F70000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298FC0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290ED0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290FE0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002910F0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000291200000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002936D0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293720000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000295030000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002950C0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000295150000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002951E0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002971F0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000297300000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000297410000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000297520000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000291310000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000299010000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000299060000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000291420000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000291530000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293770000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002937C0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] frametime: 60 s: 3415 frames in 60.0 s, mean 56.9 fps, 1% low 20.4 fps, over 25 ms 107, 50 ms 31, 100 ms 9
+[host] frametime:   worst frame 129: 508.7 ms; pipeline build 0.1, texture upload 19.6 (astc 0.0), replay 333.4, fence/present wait 500.2, pacing 0.0
+[host] frametime:   worst frame 128: 320.7 ms; pipeline build 5.3, texture upload 10.8 (astc 1.3), replay 267.2, fence/present wait 243.3, pacing 12.1
+[host] frametime:   worst frame 217: 260.1 ms; pipeline build 3.5, texture upload 42.8 (astc 28.2), replay 250.2, fence/present wait 235.8, pacing 0.0
+[host] frametime:   worst frame 929: 257.3 ms; pipeline build 0.0, texture upload 35.0 (astc 9.7), replay 167.7, fence/present wait 249.1, pacing 3.2
+[host] frametime:   worst frame 219: 119.6 ms; pipeline build 0.0, texture upload 13.9 (astc 1.5), replay 48.2, fence/present wait 111.7, pacing 0.0
+[host] game: speed 0.96x over 5.0 s (289 frames, 0 interval changes, MKW_FPS 60)
+[host] nvn: CPU-visible physical pool 0000000295270000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000295300000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000295390000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000297630000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000297740000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296530000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] vk_pipeline: gpl: 9 fast links (9 by workers; avg 0.03 ms, max 0.17 ms, 0 failed), 378 draws lookups found shader libraries missing (left to a worker), 9 optimised pipelines swapped in (9 queued low after their fast link), 0 drawing-thread links over 5 ms; 0 waiting draws built their libraries (avg 0.00 ms, max 0.00 ms)
+[host] vk_pipeline: gpl: vertex input libraries 1 (avg 0.01 ms, max 0.01 ms)
+[host] vk_pipeline: gpl: pre-rasterization libraries 9 (avg 40.60 ms, max 92.39 ms)
+[host] vk_pipeline: gpl: fragment shader libraries 9 (avg 59.69 ms, max 114.61 ms)
+[host] vk_pipeline: gpl: fragment output libraries 3 (avg 0.01 ms, max 0.01 ms)
+[host] nvn: CPU-visible physical pool 00000002990B0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000299100000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290210000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293810000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293860000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290650000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294970000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294BB0000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296970000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000297850000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000299150000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002991A0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002938B0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293900000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293950000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002939A0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 000000028FFF0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290980000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294850000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294D60000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002991F0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000299240000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000299290000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 00000002992E0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296310000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296CA0000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000290540000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000294B20000 (flags 0x18c, size 0x80000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000296860000 (flags 0x18c, size 0x100000) keeps the game's storage
+[host] nvn: asynchronous replay at submit 14400: 0 recording clones so far, 0 copies waiting for the replay
+[host] codec: VP9 decoder 1 (640x360) on the host
+[host] codec: image pool 0000000253863520 640x360 format 3 mode 1 count 1
+[host] codec: acquire 1: decoder 1 slot 0 frame 1 (decoded 0)
+[host] codec: request 1: decoder 1 frame 1
+[host] codec: image pool 00000002538635E8 640x360 format 3 mode 1 count 1
+[host] codec: acquire 2: decoder 1 slot 1 frame 2 (decoded 0)
+[host] codec: request 2: decoder 1 frame 2
+[host] codec: image pool 00000002538636B0 640x360 format 3 mode 1 count 1
+[host] codec: acquire 3: decoder 1 slot 2 frame 3 (decoded 0)
+[host] codec: request 3: decoder 1 frame 3
+[host] codec: image pool 0000000253863778 640x360 format 3 mode 1 count 1
+[host] codec: acquire 4: decoder 1 slot 3 frame 4 (decoded 0)
+[host] codec: request 4: decoder 1 frame 4
+[host] codec: submit 1: decoder 1 43595 bytes pts 0 eos 0 (decoded 0, acquired 4)
+[host] codec: submit 2: decoder 1 10753 bytes pts 17000000 eos 0 (decoded 0, acquired 4)
+[host] codec: submit 3: decoder 1 957 bytes pts 33000000 eos 0 (decoded 0, acquired 4)
+[host] codec: submit 4: decoder 1 975 bytes pts 50000000 eos 0 (decoded 0, acquired 4)
+[host] codec: busy 1: decoder 1
+[host] codec: submit 5: decoder 1 975 bytes pts 50000000 eos 0 (decoded 0, acquired 4)
+[host] codec: busy 2: decoder 1
+[host] codec: frame 1: decoder 1 frame 1 640x360 eos 0
+[host] codec: signal 1: decoder 1 frame 1
+[host] codec: props 1: decoder 1 slot 0 frame 1: decoded
+[host] codec: frame 2: decoder 1 frame 2 640x360 eos 0
+[host] codec: signal 2: decoder 1 frame 2
+[host] codec: props 2: decoder 1 slot 1 frame 2: decoded
+[host] codec: frame 3: decoder 1 frame 3 640x360 eos 0
+[host] codec: signal 3: decoder 1 frame 3
+[host] codec: props 3: decoder 1 slot 2 frame 3: decoded
+[host] codec: submit 6: decoder 1 975 bytes pts 50000000 eos 0 (decoded 3, acquired 4)
+[host] codec: props 4: decoder 1 slot 0 frame 1: decoded
+[host] codec: read 1: pool 0x253863520 640x360 at 0,0: frame; luma 0000000254C65000+0x38400 pitch 640 chroma 0000000254C9D400+0x1c200 pitch 640 (GPU pool 0000000000000000)
+[host] codec: props 5: decoder 1 slot 1 frame 2: decoded
+[host] codec: read 2: pool 0x2538635e8 640x360 at 0,0: frame; luma 0000000254CBB000+0x38400 pitch 640 chroma 0000000254CF3400+0x1c200 pitch 640 (GPU pool 0000000000000000)
+[host] codec: props 6: decoder 1 slot 2 frame 3: decoded
+[host] codec: read 3: pool 0x2538636b0 640x360 at 0,0: frame; luma 0000000254D11000+0x38400 pitch 640 chroma 0000000254D49400+0x1c200 pitch 640 (GPU pool 0000000000000000)
+[host] codec: frame 4: decoder 1 frame 4 640x360 eos 0
+[host] codec: signal 4: decoder 1 frame 4
+[host] codec: frame 5: decoder 1 frame 5 640x360 eos 0
+[host] codec: busy 3: decoder 1
+[host] codec: frame 6: decoder 1 frame 6 640x360 eos 0
+[host] codec: read 4: pool 0x253863778 640x360 at 0,0: frame; luma 0000000254D67000+0x38400 pitch 640 chroma 0000000254D9F400+0x1c200 pitch 640 (GPU pool 0000000000000000)
+[host] codec: release 1: decoder 1 slot 0
+[host] codec: acquire 5: decoder 1 slot 0 frame 5 (decoded 7)
+[host] codec: request 5: decoder 1 frame 5
+[host] codec: signal 5: decoder 1 frame 5
+[host] nvn: acquires since the last line: 1800, 0 waited for the GPU, 0.0 ms waited per acquire
+[host] codec: busy 4: decoder 1
+[host] codec: read 5: pool 0x253863520 640x360 at 0,0: frame; luma 0000000254C65000+0x38400 pitch 640 chroma 0000000254C9D400+0x1c200 pitch 640 (GPU pool 0000000000000000)
+[host] codec: release 2: decoder 1 slot 1
+[host] codec: acquire 6: decoder 1 slot 1 frame 6 (decoded 7)
+[host] codec: request 6: decoder 1 frame 6
+[host] codec: signal 6: decoder 1 frame 6
+[host] codec: busy 5: decoder 1
+[host] codec: busy 6: decoder 1
+[host] kernel: frame 3600: asynchronous preemption: 581 interrupted, 581 cores given up there; refused: 1905 in a host call, 27 outside game code, 0 preemption disabled, 0 failed; 125913 waits ended in the first spin; SVC 0x36 0
+[host] vk: replay queue at frame 3600: pool_fini 1107 calls, 185 waited 518.0 ms; map_virtual 804 calls, 0 waited 0.0 ms; texture_release (queued) 25400 calls, 0 waited 0.0 ms; program_release 129 calls, 1 waited 0.0 ms; frame bound 1800 calls, 0 waited 0.0 ms
+[host] codec: read 6: pool 0x2538635e8 640x360 at 0,0: frame; luma 0000000254CBB000+0x38400 pitch 640 chroma 0000000254CF3400+0x1c200 pitch 640 (GPU pool 0000000000000000)
+[host] codec: release 3: decoder 1 slot 2
+[host] codec: release 4: decoder 1 slot 3
+[host] codec: release 5: decoder 1 slot 0
+[host] codec: release 6: decoder 1 slot 1
+[host] menu: 0.042 ms CPU per open frame (layout and recording, mean of 600)
+[host] vk_usnap: 3600 submissions with a snapshot, 0 without; per submission 343 ranges, 348.9 KiB copied in 0.158 ms (0.103 of it collecting and merging the ranges), 1533 uniform bindings from the copy, 0.5 dropped by GPU writes, 0.0 left out (GPU writes in flight), 0.0 refused (not an imported pool), 0.0 regions from the submit's copy (MKW_USNAP_AT_SUBMIT)
+[host] codec: submit 256: decoder 1 722 bytes pts 1750000000 eos 0 (decoded 105, acquired 103)
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 40.7 ms
+[host] vk_exec: frame 3719: a draw waited 40.7 ms for its pipeline (one-shot): 372 vertices, pass 128x128, c0 fmt 122 128x128 L6 seen 3341/3329; c1 fmt 122 128x128 L18 seen 3341/3329; d0 fmt 130 128x128 L0 seen 3344/3343
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 39.8 ms
+[host] vk_exec: frame 3719: a draw waited 39.8 ms for its pipeline (one-shot): 495 vertices, pass 128x128, c0 fmt 122 128x128 L6 seen 3341/3329; c1 fmt 122 128x128 L18 seen 3341/3329; d0 fmt 130 128x128 L0 seen 3344/3343
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 17.8 ms
+[host] vk_exec: frame 3719: a draw waited 17.8 ms for its pipeline (one-shot): 255 vertices, pass 128x128, c0 fmt 122 128x128 L6 seen 3341/3329; c1 fmt 122 128x128 L18 seen 3341/3329; d0 fmt 130 128x128 L0 seen 3344/3343
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 34.8 ms
+[host] vk_exec: frame 3719: a draw waited 34.8 ms for its pipeline (one-shot): 21 vertices, pass 128x128, c0 fmt 122 128x128 L6 seen 3341/3329; c1 fmt 122 128x128 L18 seen 3341/3329; d0 fmt 130 128x128 L0 seen 3344/3343
+[host] vk: ASTC: 163840 regions, 4803.1 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 34.4 ms
+[host] vk_exec: frame 3719: a draw waited 34.5 ms for its pipeline (one-shot): 330 vertices, pass 128x128, c0 fmt 122 128x128 L6 seen 3719/3341; c1 fmt 122 128x128 L18 seen 3719/3341; d0 fmt 130 128x128 L0 seen 3719/3344
+[host] game: speed 0.94x over 5.2 s (296 frames, 0 interval changes, MKW_FPS 60)
+[host] codec: props 256: decoder 1 slot 3 frame 128: decoded
+[host] nvn: queue order in the last 1500 submits: 2250 event waits, 1500 not met in submit order (the census, MKW_QUEUE_WAITS=0); 0 episodes, 0 submissions held, 0 waits let go, 0 queues let on by the CPU, 0.0 MiB of ops ordered
+[host] nvn: submits since the last line: 1500, 0 with samples-passed reports (0 reports), 1935 other reports, 4875 event signals
+[host] nvn: CPU-visible physical pool 0000000293310000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000293360000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] nvn: CPU-visible physical pool 0000000298C50000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] vk: sparse bind 256: 8 blocks in 2 images (78767 blocks so far, 27326 slots live, 1707 MiB, 26189 written)
+[host] nvn: CPU-visible physical pool 0000000298CA0000 (flags 0x18c, size 0x40000) keeps the game's storage
+[host] codec: busy 256: decoder 1
+[host] codec: VP9 decoder 1 finalized
+[host] codec: VP9 decoder 2 (2560x1440) on the host
+[host] codec: image pool 0000000253E74520 2560x1440 format 3 mode 1 count 1
+[host] codec: image pool 0000000253E745E8 2560x1440 format 3 mode 1 count 1
+[host] codec: submit 512: decoder 2 100791 bytes pts 750000000 eos 0 (decoded 43, acquired 42)
+[host] codec: acquire 256: decoder 2 slot 0 frame 71 (decoded 72)
+[host] codec: request 256: decoder 2 frame 71
+[host] codec: decode 1.54 ms a frame, worst 9.99 ms (256 frames)
+[host] codec: frame 256: decoder 2 frame 75 2560x1440 eos 0
+[host] codec: signal 256: decoder 2 frame 75
+[host] codec: release 256: decoder 2 slot 0
+[host] codec: props 512: decoder 2 slot 0 frame 77: decoded
+[host] codec: read 256: pool 0x253e745e8 2560x1440 at 0,0: frame; luma 000000025CFBE000+0x384000 pitch 2560 chroma 000000025D342000+0x1c2000 pitch 2560 (GPU pool 0000000000000000)
+[host] game: speed 0.90x over 5.1 s (277 frames, 0 interval changes, MKW_FPS 60)
+[host] vk: ASTC: 165648 regions, 4826.5 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 166512 regions, 4826.8 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 167376 regions, 4827.1 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 168240 regions, 4827.4 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 168960 regions, 4827.5 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 170400 regions, 4827.8 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 171120 regions, 4827.9 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 172560 regions, 4828.1 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 173280 regions, 4828.2 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 175008 regions, 4829.5 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 176016 regions, 4830.6 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 176130 regions, 4841.8 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 78.1 ms
+[host] vk_exec: frame 3996: a draw waited 78.1 ms for its pipeline (one-shot): 3135 vertices, pass 1280x720, c0 fmt 122 1280x720 L0 seen 3314/3313; d0 fmt 130 1280x720 L0 seen 3314/3313
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 82.6 ms
+[host] vk_exec: frame 3996: a draw waited 82.6 ms for its pipeline (one-shot): 360 vertices, pass 1280x720, c0 fmt 122 1280x720 L0 seen 3996/3314; d0 fmt 130 1280x720 L0 seen 3996/3314
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 60.6 ms
+[host] vk_exec: frame 3996: a draw waited 60.7 ms for its pipeline (one-shot): 1896 vertices, pass 1280x720, c0 fmt 122 1280x720 L0 seen 3996/3314; d0 fmt 130 1280x720 L0 seen 3996/3314
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 67.0 ms
+[host] vk_exec: frame 3996: a draw waited 67.0 ms for its pipeline (one-shot): 1869 vertices, pass 1280x720, c0 fmt 122 1280x720 L0 seen 3996/3314; d0 fmt 130 1280x720 L0 seen 3996/3314
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 72.8 ms
+[host] vk_exec: frame 3996: a draw waited 72.8 ms for its pipeline (one-shot): 258 vertices, pass 1280x720, c0 fmt 122 1280x720 L0 seen 3996/3314; d0 fmt 130 1280x720 L0 seen 3996/3314
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 75.2 ms
+[host] vk_exec: frame 3996: a draw waited 75.2 ms for its pipeline (one-shot): 258 vertices, pass 1280x720, c0 fmt 122 1280x720 L0 seen 3996/3314; d0 fmt 130 1280x720 L0 seen 3996/3314
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 143.9 ms
+[host] vk_exec: frame 3996: a draw waited 143.9 ms for its pipeline (one-shot): 18 vertices, pass 1280x720, c0 fmt 97 1280x720 L0 seen 3996/3342; d0 fmt 130 1280x720 L0 seen 3996/3342
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 129.9 ms
+[host] vk_exec: frame 3996: a draw waited 129.9 ms for its pipeline (one-shot): 18 vertices, pass 1280x720, c0 fmt 97 1280x720 L0 seen 3996/3342; d0 fmt 130 1280x720 L0 seen 3996/3342
+[host] vk: ASTC: 177158 regions, 4902.2 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 115.6 ms
+[host] vk_exec: frame 3996: a draw waited 115.6 ms for its pipeline (one-shot): 30 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk: ASTC: 178176 regions, 4947.7 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk: ASTC: 179206 regions, 4958.7 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 77.8 ms
+[host] vk_exec: frame 3996: a draw waited 77.8 ms for its pipeline (one-shot): 30 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 1486 of 2304 images; BC7 for 4096+ 23, no CPU storage 0, GPU-only 0, sparse 0, alpha 795 (BC1 for alpha 1 decoded in every texel 1382, 274 ms decoding)
+[host] vk: ASTC: 180226 regions, 4966.9 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk_pipeline: gpl: a waiting draw got its libraries in 29.3 ms
+[host] vk_exec: frame 3996: a draw waited 29.3 ms for its pipeline (one-shot): 762 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 94.0 ms for its pipeline (one-shot): 4902 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 73.7 ms for its pipeline (one-shot): 4272 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk: ASTC: 181250 regions, 4971.1 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk_exec: frame 3996: a draw waited 81.3 ms for its pipeline (one-shot): 297 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 72.1 ms for its pipeline (one-shot): 372 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 60.8 ms for its pipeline (one-shot): 12 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 66.5 ms for its pipeline (one-shot): 15 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 69.9 ms for its pipeline (one-shot): 120 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 82.7 ms for its pipeline (one-shot): 2079 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk: ASTC: 182275 regions, 5001.8 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk_exec: frame 3996: a draw waited 65.2 ms for its pipeline (one-shot): 24 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 73.5 ms for its pipeline (one-shot): 1869 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 70.3 ms for its pipeline (one-shot): 15 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 78.5 ms for its pipeline (one-shot): 21 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 71.5 ms for its pipeline (one-shot): 129 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk: ASTC: 183297 regions, 5107.5 M texels decoded on the GPU so far; scratch allocations 57, 36.4 ms
+[host] vk_exec: frame 3996: a draw waited 65.7 ms for its pipeline (one-shot): 144 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 76.4 ms for its pipeline (one-shot): 849 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk: ASTC BC1 (MKW_ASTC_BC1): 1663 of 2560 images; BC7 for 4096+ 23, no CPU storage 0, GPU-only 0, sparse 0, alpha 874 (BC1 for alpha 1 decoded in every texel 1549, 298 ms decoding)
+[host] vk: ASTC: 184330 regions, 5264.2 M texels decoded on the GPU so far; scratch allocations 58, 36.8 ms
+[host] vk_exec: frame 3996: a draw waited 60.7 ms for its pipeline (one-shot): 4 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 73.3 ms for its pipeline (one-shot): 4 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 54.6 ms for its pipeline (one-shot): 840 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 174.0 ms for its pipeline (one-shot): 12 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 86.0 ms for its pipeline (one-shot): 12 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 52.9 ms for its pipeline (one-shot): 12 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 78.0 ms for its pipeline (one-shot): 4 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk_exec: frame 3996: a draw waited 182.0 ms for its pipeline (one-shot): 4 vertices, pass 2560x1440, c0 fmt 122 2560x1440 L0 seen 3996/3342; d0 fmt 130 2560x1440 L0 seen 3996/3350
+[host] vk: device fault: ; 1 addresses, 0 vendor records
+[host] vk: device fault: instruction pointer invalid at 0x202c0f420 (precision 0x10)
+[host] vk: GPU breadcrumbs (4181755 marks made): the hang lies after the last finished mark and up to the last started
+[host] vk:   upload batches: last started 4180239, upload batch 2444 in frame 3995
+[host] vk:   upload batches: last finished 4180239, upload batch 2444 in frame 3995
+[host] vk:   replay passes and dispatches: last started 4180295, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:   replay passes and dispatches: last finished 4180250, draw in frame 3995: vs 081986140bc1a344cf9f3a954226794650616e04801816df5f89fa5bd1ac14e7 fs 76b688227fb00baafcf275391701706b1f8b19458d202b3dc5ee39dcc6c2ed9f
+[host] vk:   the 45 marks in that window:
+[host] vk:     4180251, draw in frame 3995: vs 411ede9487c02f78a2823284def6228347905531577a65f91c6c192b79102531 fs 9765a2b3067687519f23082f39382eca78598b3f237e2507e5d75463d9881e93
+[host] vk:     4180252, draw in frame 3995: vs 411ede9487c02f78a2823284def6228347905531577a65f91c6c192b79102531 fs 9765a2b3067687519f23082f39382eca78598b3f237e2507e5d75463d9881e93
+[host] vk:     4180253, draw in frame 3995: vs 67b15f1458910f1f41e3bfb0b2b9bc8e5f96bc354eeba538292643ecd0d48c5b fs 4b7d203c502fd723fde30916d39f3c1ff1e6373172234cf5403dec26544b5413
+[host] vk:     4180254, draw in frame 3995: vs 67b15f1458910f1f41e3bfb0b2b9bc8e5f96bc354eeba538292643ecd0d48c5b fs 4b7d203c502fd723fde30916d39f3c1ff1e6373172234cf5403dec26544b5413
+[host] vk:     4180255, draw in frame 3995: vs 67b15f1458910f1f41e3bfb0b2b9bc8e5f96bc354eeba538292643ecd0d48c5b fs 4b7d203c502fd723fde30916d39f3c1ff1e6373172234cf5403dec26544b5413
+[host] vk:     4180256, draw in frame 3995: vs 67b15f1458910f1f41e3bfb0b2b9bc8e5f96bc354eeba538292643ecd0d48c5b fs 4b7d203c502fd723fde30916d39f3c1ff1e6373172234cf5403dec26544b5413
+[host] vk:     4180257, draw in frame 3995: vs cb32c52669493b7cd56aef97a3e11fed201477eee5bdd6c191ab16cf6c8104c4 fs 64ea129e71f38e75209e07683640901f93f921a6b009ba9774b79dd702f7790a
+[host] vk:     4180258, draw in frame 3995: vs 67b15f1458910f1f41e3bfb0b2b9bc8e5f96bc354eeba538292643ecd0d48c5b fs 4b7d203c502fd723fde30916d39f3c1ff1e6373172234cf5403dec26544b5413
+[host] vk:     4180259, draw in frame 3995: vs a51a1b9821cb1f5ff3695e823ffd5ea4cab07c7eb89e31e97700e04f04de1b93 fs 5813302d827f6b533d4d3c92dd395f211318fdcb9942c909e3962cfc1adfe463
+[host] vk:     4180260, draw in frame 3995: vs a51a1b9821cb1f5ff3695e823ffd5ea4cab07c7eb89e31e97700e04f04de1b93 fs 5813302d827f6b533d4d3c92dd395f211318fdcb9942c909e3962cfc1adfe463
+[host] vk:     4180261, draw in frame 3995: vs a51a1b9821cb1f5ff3695e823ffd5ea4cab07c7eb89e31e97700e04f04de1b93 fs 5813302d827f6b533d4d3c92dd395f211318fdcb9942c909e3962cfc1adfe463
+[host] vk:     4180262, draw in frame 3995: vs a51a1b9821cb1f5ff3695e823ffd5ea4cab07c7eb89e31e97700e04f04de1b93 fs 5813302d827f6b533d4d3c92dd395f211318fdcb9942c909e3962cfc1adfe463
+[host] vk:     4180263, draw in frame 3995: vs a51a1b9821cb1f5ff3695e823ffd5ea4cab07c7eb89e31e97700e04f04de1b93 fs 5813302d827f6b533d4d3c92dd395f211318fdcb9942c909e3962cfc1adfe463
+[host] vk:     4180264, draw in frame 3995: vs a51a1b9821cb1f5ff3695e823ffd5ea4cab07c7eb89e31e97700e04f04de1b93 fs 5813302d827f6b533d4d3c92dd395f211318fdcb9942c909e3962cfc1adfe463
+[host] vk:     4180265, draw in frame 3995: vs a51a1b9821cb1f5ff3695e823ffd5ea4cab07c7eb89e31e97700e04f04de1b93 fs 5813302d827f6b533d4d3c92dd395f211318fdcb9942c909e3962cfc1adfe463
+[host] vk:     4180266, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180267, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180268, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180269, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180270, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180271, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180272, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180273, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180274, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180275, draw in frame 3995: vs afacd08f55ff39d460695ce887e3d6f8a021e267c243e2245cf92f44b072fc9d fs 211767faf96194e3d106d88ba09c520c4c5b4aae6c208ef11a28856059b52e1a
+[host] vk:     4180276, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180277, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180278, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180279, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180280, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180281, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180282, draw in frame 3995: vs 943e3d421b80f2cd93f79bcfb9e4840e0fcc6027f667bcc1b1776f3eecd247f4 fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180283, draw in frame 3995: vs 943e3d421b80f2cd93f79bcfb9e4840e0fcc6027f667bcc1b1776f3eecd247f4 fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180284, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180285, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180286, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180287, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180288, draw in frame 3995: vs 943e3d421b80f2cd93f79bcfb9e4840e0fcc6027f667bcc1b1776f3eecd247f4 fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180289, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180290, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180291, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180292, draw in frame 3995: vs 943e3d421b80f2cd93f79bcfb9e4840e0fcc6027f667bcc1b1776f3eecd247f4 fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180293, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180294, draw in frame 3995: vs 943e3d421b80f2cd93f79bcfb9e4840e0fcc6027f667bcc1b1776f3eecd247f4 fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk:     4180295, draw in frame 3995: vs 1c7a765b007f94a5b7faccc820e2eeece73cb14d20ffaa69c1733e99ca43c9ba fs 42010357a0eafef375eca748d0282906a1bf9e50ac15e5ba91189acc190ae3f4
+[host] vk_exec: the last 64 programs drawn or dispatched with (oldest first; prepared SPIR-V keys):
+[host]   fdcfcaf842524eb14f47d6136ee13724f9e21ed924457c0ef3cc76be5a972172 47959855f754a1953ede70b1b638095af8ca7d838326bf9925e0dc8fc4a83029
+[host]   8522567ca7970df4c4e1a6cf1e4454a59a788ec3a6023a327aaa0189ed8e8aed 
+[host]   e112e7890542b9763fcfdb4157fb9eb917d01478a3f51fbf86b62f9dda01a78e 
+[host]   f7c68ad4650cbae7dd5cb24738ac817672f885c6f51efb630b85fd30ef30695d 
+[host]   06f03cc5a5a3dde15717282d983b781ce6ad1664fb402938836e392bdb9bce09 5da68270f39eea1beaea1a011b91fe2a4069d29149b19a2daa7348b95af77080
+[host]   04a209f2e78754bd6a1ebac96d1a17dcec7faddabc6f92b5c03d544d7fa3dd16 6f97a82553fc9820c073e5e61a2c1d788e3542d69be89ee69f6f9cdd6d7df9f5
+[host]   c591232525f041f9e681a33e44d960c93e79054f5de218136a589d4dc7459857 8dc1048ac84eb282dc779b1c5c850a6ea71fbf113e7d3cf1e14c264c9ac61354
+[host]   cddf650ab181ff5562cecc12db48e7c9c5ad9011dfb31178365a4f9c70c4b3f2 41cee8c6ac1280dff6350e67dc8642ce4b04a0b98ab2ce5fe1939f9e88cf7bbb
+[host]   58906681f61aaf0701cfee7aa891dd62283a426769d21df9814574cd0c6de8f8 
+[host]   b5e48bd098cbca7682a69fbb4c0db9f56ba8bc40ed7ec2355abdcc256a8f7ff8 
+[host]   5d083bef59c8e5b8d4e3b2a7f0886f119304da2e2049faa51fc196d90735e57f c6f85c22bc36d89d8fb358da27f1b94d635b13acbe1820c325d1cc6f610f00d9
+[host]   61fb5ce38233a3f73da438078acc40b59705b3f1e8055f53e293d95e2c9ac2b9 d50d2bc0a9bdca54326b18d1c084c07da19715f50f755d5f2f33b6231a093093
+[host]   8b3f3130039b97068c1fb2e02a7e6f098d0d397f8e98daf6a8c66b8d3524b5f9 
+[host]   62e5de23e552a9c7b85b42c91456d1a31bb0e6b9530ec5327a151e5f827d6279 
+[host]   0dfb6f86b9c5cafa35825f9eb8db9a56f49a06ef2a1e6227a14a52995d288c94 
+[host]   6731ae8d6aec354d98214343a021f871c4e9403a9773e9e460b24db5e2092c26 
+[host]   0cb78db5106cfe2a371d71672426407a091133c71ed91e2149ac70a5eee791a5 
+[host]   8b3f3130039b97068c1fb2e02a7e6f098d0d397f8e98daf6a8c66b8d3524b5f9 
+[host]   58b75ed585c4890b7d4647e847b1c74e8fa69d95a30ad72d037173fb79212f83 
+[host]   f674ba3ac448c7d064d6ad7cc479a070a7646630ba6b9a8c971c3aaf6a9a7825 
+[host]   cef01713d2dd1a4ae9fe07f9176de925378b3312e5a215cf626aa5ef72d93d44 
+[host]   acf532f09e73efeefcfc778edbc9a67b5ab4ecef3c7b809897ebdeb61e575fd6 
+[host]   6b838846ebf6e931768dd4641cc3ac051f89937906d956203b53ee01ac08c614 
+[host]   38509b73af8a1f775e7a842dad4a3735ef9e1df80819c6d645a61aff0d7ae094 
+[host]   b6a72392724f353181085b48a91217ae9f3ef77dc7977a089b392271cdfcfc87 
+[host]   3acd8d95a8b235a88f0f6de6fd18b44835c6c7713e33af8ed9eb1bb0bfbeeb11 
+[host]   5393aa6bd786866c1fec2f9d3a78b277d4714f0e1303a04f7764e17e57248b85 
+[host]   6295d5d7881753a5c5ddf5273a6211554d1ce2cdd2abadc9e258477d5134e637 
+[host]   cff04c3ea9d6f910173e29fa21cee02c6e5cf790607b4340d09da4b2871ac86d 
+[host]   0fde431b6c8c1617cd33573e863b238a3218ff8c8a1184168ba94c84de083d95 
+[host]   df9bd1f832d240e3f04a67ca5a2ad13b39944dc09e8945fa15fe7d1b6c0d1132 
+[host]   de630f92bf1c402860becb454918c92c966954437481d9382cca8249776d6831 
+[host]   27a544d9a79735fc8b1d98def65e55d9cfde697a49e913844342845eb49f96d0 
+[host]   a4d665419f742c8d8a69784b236ab41a04d7cab8855358ea551f3090b2ae9447 
+[host]   80b72c27db9960fdd127e233e3464545f741f84e0cba11bd543d956b3f0c724e 
+[host]   3a4ccb9b87f71672ff989194355f460406bf4c93ebfc757abc98a2bd277dc032 
+[host]   f0b9749a640fcae60d2cac4b5145e072173cee2b30417dc69f05711b8740dcd6 
+[host]   915f4d76568df888836a2e96fc5ce179bf3e64439de028a4a6d704df3785f78a 
+[host]   d9f66422b9b5cb6bf48354c585ed5248d31ce0a34ab3bad5ebadcc1b5984b86f 
+[host]   bd134340290b05449af4df96e87258bc28d4b11a7db8a86018aaeeb538466c04 
+[host]   76eb60a97df70635e79fb1ecf4df22e03b4112d70b46e5813ff8100df3954808 
+[host]   9290b992ff4fb2736ae1926c46da914acb987abdf34d19c1e1e130be8f808bb3 
+[host]   588c43048b967967c7e221bcdfa300591666700371b72f01a5ed60a67024ec93 
+[host]   dfec76fa8144ebac05d45248750921975ffb1d3df05435ee4ac8863119ccbccd 
+[host]   22f1b92ddabe1a950a016dc2696fc1f59311bf69243b1264adcb62333667b15c 
+[host]   97aa2369a6ecce60332b4a4203c8d08d86f994eb40a9699038d943f130211f9d 
+[host]   d3f94193be138efe6d93eaebbed4f34ccf4bb8d2394f6bceb321c9a8d600cc96 
+[host]   6d7b8bff96d57d4495a790826f20e2135942ee482173d03a8f11d7bee423b7dd 
+[host]   5507e4a2b138ee67940f4317fa4c277a1a90e913f4ae8317cd48fda55911215d 
+[host]   bde7aa46c360609f2e32b6683e7cdf65a278e227215a7b145c8d6d2e9c0bcd61 
+[host]   4424835b38ce070a754acad621adb156c6de7b16624e2aaf43c25260fd1cec08 
+[host]   a23046423c0af18fec8d6221f224f75882b19ccd9bd3fc1eece838ecbacc4ac8 
+[host]   b444f1d2585edd6584f7cc905fbb871484abe35fd835c28324518870c4d9530f 
+[host]   08b0a364344de05ea58ef3c70455f32dea88b299a11ae88e92470d63ca327b4d 
+[host]   e0062be2baf5c0590ed04e0e79c0439901efd44267718aa602b434d579fa0952 
+[host]   9f19849b1b8a477b3e14b42149323d05f91ea0887cda75b55d96a7ac27950109 
+[host]   e11cd795fcc756e09d00b815dd90e7e53bf1484b7cd61af286276f9325a06960 
+[host]   106dd43aa7b1b608a37cb9193922a41f60f8a966c78f87506fcfd1d74183a3a9 
+[host]   6bb1c748eb2e720971a74da3b4b74486db1103b5a788c77a6b591a58c462b5d6 
+[host]   45e6576a96b6baa7b2e24174028adf6603a07e48b207b2f255426e9bcc60c146 
+[host]   dead83d20e3c47bfb54ef6836e4c226a0cc1902f03a148de4b57ab14b2dedd48 
+[host]   dc4d78f3b81314caa338bdbf35261a188c4d18bd162c5acb191fe16b69f78f97 
+[host]   fc3ba87c2892f0254fe6a59f66c475b4d11a425565a6ec175ef6c0a5b81da412 
+[host]   2bd6823113ca65ed91b2790ac4546be4b3e9291ca624a38e37c10f542f3ed74f 
+FATAL: vk: upload submit failed (-4)
